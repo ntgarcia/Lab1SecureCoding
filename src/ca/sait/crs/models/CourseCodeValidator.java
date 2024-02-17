@@ -9,8 +9,13 @@ public class CourseCodeValidator implements Validator {
 
     @Override
     public boolean validate(String courseCode) {
-        // TODO: Add logic to validate course code.
-        // For example, check if the format is correct.
+        if (courseCode == null || courseCode.isEmpty()) {
+            return false;
+        }
+
+        
+        
+        
         return true;
     }
 }

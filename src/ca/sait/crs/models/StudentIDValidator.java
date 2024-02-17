@@ -2,9 +2,7 @@ package ca.sait.crs.models;
 
 import interfaces.Validator;
 
-/**
- * Validates student ID.
- */
+// validate student Id
 public class StudentIDValidator implements Validator {
 
     @Override

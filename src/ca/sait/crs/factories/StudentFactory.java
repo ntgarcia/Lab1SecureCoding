@@ -35,7 +35,7 @@ public class StudentFactory {
      * @return True if name is valid
      */
     private boolean validateName(String name) {
-        // TODO: Add logic to test name is valid.
+        
         return true;
     }
 
