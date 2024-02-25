@@ -13,24 +13,21 @@ import ca.sait.crs.exceptions.CannotCreateRegistrationException;
 
 public class ProxyRegistrationService implements RegistrationService {
 
-    private final RealRegistrationService realRegistrationService;
+	private final RealRegistrationService realRegistrationService;
 
-    public ProxyRegistrationService() {
-        this.realRegistrationService = new RealRegistrationService();
-    }
+	public ProxyRegistrationService() {
+		this.realRegistrationService = new RealRegistrationService();
+	}
 
-    @Override
-    public Registration register(Student student, Course course) throws CannotCreateRegistrationException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'register'");
-    }
+	@Override
+	public Registration register(Student student, Course course) throws CannotCreateRegistrationException {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'register'");
+	}
 
-    @Override
-    public ArrayList<Registration> getRegistrations() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRegistrations'");
-    }
-    
+	@Override
+	public ArrayList<Registration> getRegistrations() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getRegistrations'");
+	}
 }
-
-
