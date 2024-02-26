@@ -6,7 +6,6 @@ import ca.sait.crs.contracts.Student;
 
 import java.util.ArrayList;
 
-// TODO: Make this class immutable.
 
 /**
  * Registers student with course.
@@ -14,7 +13,7 @@ import java.util.ArrayList;
  * @since June 1, 2023
  */
 public class RealRegistrationService implements RegistrationService {
-    private ArrayList<Registration> registrations;
+    private final ArrayList<Registration> registrations;
 
     public RealRegistrationService() {
         this.registrations = new ArrayList<>();
