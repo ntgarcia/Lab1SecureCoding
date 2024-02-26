@@ -18,15 +18,14 @@ public class CourseRegistrationSystem {
 	private final Scanner scanner;
 
 	private final CourseService courseService;
-	private final RegistrationService registrationService;
+	private final ProxyRegistrationService registrationService;
 
 	public CourseRegistrationSystem() throws FileNotFoundException {
 		this.scanner = new Scanner(System.in);
 		this.courseService = new CourseService();
 
-		// TODO: Wrap RealRegistrationService using your ProxyRegistrationService
 		// DO NOT MODIFY ANYTHING ELSE IN THIS FILE!
-		this.registrationService = new RealRegistrationService();
+		this.registrationService = new ProxyRegistrationService();
 	}
 
 	/**
@@ -113,7 +112,6 @@ public class CourseRegistrationSystem {
 	 * Registers a student with a course.
 	 */
 	private void register() {
-		// TODO: Create instance of StudentFactory.
 
 		Course course = null;
 		while (course == null) {
@@ -134,19 +132,30 @@ public class CourseRegistrationSystem {
 		double studentGpa = this.scanner.nextDouble();
 
 		try {
-			// TODO: Call build() method in StudentFactory instance to handle validating
 			// parameters and creating new Student object.
-			Student student = new ca.sait.crs.models.Student(studentName, studentGpa);
+			Student student = new ca.sait.crs.factories.StudentFactory().build(studentName, studentGpa);
 
-			if (student.getGpa() > 2.0) {
-				Registration registration = this.registrationService.register(student, course);
+			Registration registration = this.registrationService.register(student,
+					course);
 
-				System.out.println("Student \"" + registration.getStudent() + "\" has been registered in \""
-						+ registration.getCourse() + "\" course.");
+			System.out.println("Student \"" + registration.getStudent() +
+					"\" has been registered in \""
+					+ registration.getCourse() + "\" course.");
 
-			} else {
-				System.out.println("\nError: Student GPA is under 2.0\n");
-			}
+			/*
+			 * GPA Verification
+			 * if (student.getGpa() > 2.0) {
+			 * Registration registration = this.registrationService.register(student,
+			 * course);
+			 * 
+			 * System.out.println("Student \"" + registration.getStudent() +
+			 * "\" has been registered in \""
+			 * + registration.getCourse() + "\" course.");
+			 * 
+			 * } else {
+			 * System.out.println("\nError: Student GPA is under 2.0\n");
+			 * }
+			 */
 
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
