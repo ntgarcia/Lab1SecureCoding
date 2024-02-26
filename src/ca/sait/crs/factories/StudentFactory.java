@@ -45,7 +45,6 @@ public class StudentFactory {
      * @return True if GPA is valid
      */
     private boolean validateGpa(double gpa) {
-        // TODO: Add logic to test GPA is valid (hint: GPAs cannot be negative or more than 4.0).
-        return true;
+        return gpa >= 0.0 && gpa <= 4.0;
     }
 }

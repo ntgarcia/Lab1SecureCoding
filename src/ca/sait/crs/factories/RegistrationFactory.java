@@ -45,8 +45,7 @@ public class RegistrationFactory {
      * @return True if course is valid.
      */
     private boolean validateCourse(Course course) {
-        // TODO: Add logic to test course is valid.
-        return true;
+        return course != null && (course instanceof RequiredCourse || course instanceof OptionalCourse);
     }
 
     /**
@@ -55,7 +54,6 @@ public class RegistrationFactory {
      * @return True if student is valid.
      */
     private boolean validateStudent(Student student) {
-        // TODO: Add logic to test student is valid.
-        return true;
+        return student != null;
     }
 }
