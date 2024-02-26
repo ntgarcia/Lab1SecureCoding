@@ -26,18 +26,18 @@
       - [X] Create RequiredCourse instances for for-credit courses.
       - [X] Create OptionalCourse instances for zero-credit courses.
 
-- [ ] **Proxy Pattern:**
+- [] **Proxy Pattern:**
 
-  - [ ] Implement Proxy design pattern to control access to registration:
-    - [ ] Create proxy class as wrapper around registration process.
-    - [ ] Verify student's GPA eligibility before allowing registration.
-    - [ ] Prevent registration if GPA requirement is not met.
+  - [] Implement Proxy design pattern to control access to registration:
+    - [] Create proxy class as wrapper around registration process.
+    - [] Verify student's GPA eligibility before allowing registration.
+    - [] Prevent registration if GPA requirement is not met.
 
-- [ ] **Immutability:**
+- [X] **Immutability:**
 
-  - [ ] Ensure objects are immutable once created:
-    - [ ] Declare all fields as private and final.
-    - [ ] Provide only getters, no setters.
+  - [X] Ensure objects are immutable once created:
+    - [X] Declare all fields as private and final.
+    - [X] Provide only getters, no setters.
 
 - [ ] **Output:**
   - [ ] Display appropriate messages regarding registration status:
