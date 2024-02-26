@@ -5,26 +5,26 @@
 - [x] **Input:**
 
   - [x] Prompt the user to enter their student name, GPA, and course code.
-  - [ ] Validate user input format and ranges.
+  - [X] Validate user input format and ranges.
 
-- [ ] **GPA Verification:**
+- [x] **GPA Verification:**
 
-  - [ ] Check if the student's GPA meets the minimum requirement for course registration:
-    - [ ] GPA > 2.0: Allow registration.
-    - [ ] GPA ≤ 2.0: Inform user of ineligibility.
+  - [X] Check if the student's GPA meets the minimum requirement for course registration:
+    - [X] GPA > 2.0: Allow registration.
+    - [X] GPA ≤ 2.0: Inform user of ineligibility.
 
-- [ ] **Factory Pattern:**
+- [X] **Factory Pattern:**
 
-  - [ ] Implement Factory design pattern:
-    - [ ] Define abstract class/interface for students and courses.
-    - [ ] Implement concrete classes for specific student and course types.
-    - [ ] Create Student Factory class:
-      - [ ] Validate data.
-      - [ ] Create Student instances.
-    - [ ] Create Course Factory class:
-      - [ ] Validate data.
-      - [ ] Create RequiredCourse instances for for-credit courses.
-      - [ ] Create OptionalCourse instances for zero-credit courses.
+  - [X] Implement Factory design pattern:
+    - [X] Define abstract class/interface for students and courses.
+    - [X] Implement concrete classes for specific student and course types.
+    - [X] Create Student Factory class:
+      - [X] Validate data.
+      - [X] Create Student instances.
+    - [X] Create Course Factory class:
+      - [X] Validate data.
+      - [X] Create RequiredCourse instances for for-credit courses.
+      - [X] Create OptionalCourse instances for zero-credit courses.
 
 - [ ] **Proxy Pattern:**
 
